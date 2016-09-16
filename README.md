@@ -1,2 +1,2 @@
 # discovry
-Travel app for hack zürich 2016
+Travel app for HackZürich 2016
