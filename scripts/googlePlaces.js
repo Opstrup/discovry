@@ -29,6 +29,7 @@ function getPlaces() {
 
 function callback(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
-        locationsArray = results;
+        var locList = new LocationList();
+        locList.showList(results);
     }
 }
