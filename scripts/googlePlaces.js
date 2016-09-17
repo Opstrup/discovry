@@ -1,10 +1,5 @@
 var map;
 var autocomplete;
-var locationsArray;
-
-$(function(){
-    $('.mdl-layout__header').hide();
-});
 
 function initMap() {
     var pyrmont = {lat: -33.867, lng: 151.195};
@@ -27,8 +22,8 @@ function getPlaces() {
     var service = new google.maps.places.PlacesService(map);
     service.nearbySearch({
         location: place.geometry.location,
-        radius: 500,
-        type: ['store']
+        radius: 5000,
+        type: ['bowling_alley', 'library', 'museum', 'park', 'church', 'synagogue', 'hindu_temple', 'cemetery']
     }, callback);
 }
 
@@ -36,5 +31,7 @@ function callback(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
         var locList = new LocationList();
         locList.showList(results);
+        $('#user-container').text('top attractions in ' + $('#searchTextField').val());
+        $('.mdl-layout__header').addClass('header-show');
     }
 }

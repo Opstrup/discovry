@@ -8,3 +8,15 @@
     height: 330px;
     overflow: hidden;
 }
+
+.header-hide {
+    display: none !important;
+}
+
+.header-show {
+    display: block !important;
+}
+
+#user-container {
+    padding-right: 15px;
+}
