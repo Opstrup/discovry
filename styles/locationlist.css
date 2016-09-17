@@ -1,8 +1,8 @@
 .location-card {
   margin-top: 15px;
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
+  width: auto;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 .location-card.mdl-card {
 }
@@ -23,4 +23,17 @@ main, #location-cards-container {
   height: calc(100% - 150px);
   padding-top: 200px;
   padding-bottom: 0;
+}
+.mdl-card__actions {
+  text-align: center;
+}
+
+.add-location-button {
+  left: 0%;
+  width: 40%;
+}
+
+.added-location-status {
+  width: 40%;
+  left: -100%;
 }
