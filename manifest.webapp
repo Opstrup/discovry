@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "name": "discovry",
+  "launch_path": "/index.html",
+  "description": "Plan trips in cities",
+  "developer": {
+    "name": "Google inc.",
+    "url": "https://firebase.google.com"
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "en",
+  "permissions": {
+  },
+  "locales": {
+    "en": {
+      "name": "discovry",
+      "description": "Plan trips in cities"
+    }
+  }
+}
