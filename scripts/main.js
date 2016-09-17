@@ -31,15 +31,15 @@ function Discovry() {
   this.initFirebase();
 
   //  Example usage of LocationList
-  // var locList = new LocationList();
-  // locList.showList([
-  //   { title: 'White House',
-  //     description: 'SSådan et sygt hvidt hus derSådan et sygt hvidt hus derSådan et sygt hvidt hus derSådan et sygt hvidt hus derSådan et sygt hvidt hus derSådan et sygt hvidt hus derSådan et sygt hvidt hus der.......ådan et sygt hvidt hus der.',
-  //     img: 'https://washington-org.s3.amazonaws.com/s3fs-public/styles/editorial_wide/public/the-white-house-north-lawn-plus-fountain-and-flowers-credit-stephen-melkisethian_flickr-user-stephenmelkisethian.jpg?itok=ElC-_6Hr'},
-  //   { title: 'Eiffel Tower',
-  //     description: 'Sådan et sygt tårn der.',
-  //     img: 'http://static-v3c.raileurope-world.com/local/cache-vignettes/L760xH507/france-paris_eiffel_tower-_c_prochasson-frederic-shutterstock_102019039-1d869.jpg'},
-  // ]);
+  var locList = new LocationList();
+  locList.showList([
+    { title: 'White House',
+      description: 'Sådan et sygt hvidt hus der.',
+      photo: 'https://washington-org.s3.amazonaws.com/s3fs-public/styles/editorial_wide/public/the-white-house-north-lawn-plus-fountain-and-flowers-credit-stephen-melkisethian_flickr-user-stephenmelkisethian.jpg?itok=ElC-_6Hr'},
+    { title: 'Eiffel Tower',
+      description: 'Sådan et sygt tårn der.',
+      photo: 'http://static-v3c.raileurope-world.com/local/cache-vignettes/L760xH507/france-paris_eiffel_tower-_c_prochasson-frederic-shutterstock_102019039-1d869.jpg'}
+  ]);
 }
 
 // Sets up shortcuts to Firebase features and initiate firebase auth.
@@ -84,8 +84,6 @@ Discovry.prototype.onAuthStateChanged = function(user) {
     // Hide sign-in button.
     this.signInButton.setAttribute('hidden', 'true');
 
-    // We load currently existing chant messages.
-    this.loadMessages();
   } else { // User is signed out!
     // Hide user's profile and sign-out button.
     this.userName.setAttribute('hidden', 'true');
