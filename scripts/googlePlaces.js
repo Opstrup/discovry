@@ -1,6 +1,11 @@
 var map;
 var autocomplete;
 var locationsArray;
+
+$(function(){
+    $('.mdl-layout__header').hide();
+});
+
 function initMap() {
     var pyrmont = {lat: -33.867, lng: 151.195};
 
