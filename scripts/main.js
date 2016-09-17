@@ -28,12 +28,18 @@ function Discovry() {
   this.signOutButton.addEventListener('click', this.signOut.bind(this));
   this.signInButton.addEventListener('click', this.signIn.bind(this));
 
-  // Toggle for the button.
-  var buttonTogglingHandler = this.toggleButton.bind(this);
-  this.messageInput.addEventListener('keyup', buttonTogglingHandler);
-  this.messageInput.addEventListener('change', buttonTogglingHandler);
-
   this.initFirebase();
+
+  //  Example usage of LocationList
+  // var locList = new LocationList();
+  // locList.showList([
+  //   { title: 'White House',
+  //     description: 'SSådan et sygt hvidt hus derSådan et sygt hvidt hus derSådan et sygt hvidt hus derSådan et sygt hvidt hus derSådan et sygt hvidt hus derSådan et sygt hvidt hus derSådan et sygt hvidt hus der.......ådan et sygt hvidt hus der.',
+  //     img: 'https://washington-org.s3.amazonaws.com/s3fs-public/styles/editorial_wide/public/the-white-house-north-lawn-plus-fountain-and-flowers-credit-stephen-melkisethian_flickr-user-stephenmelkisethian.jpg?itok=ElC-_6Hr'},
+  //   { title: 'Eiffel Tower',
+  //     description: 'Sådan et sygt tårn der.',
+  //     img: 'http://static-v3c.raileurope-world.com/local/cache-vignettes/L760xH507/france-paris_eiffel_tower-_c_prochasson-frederic-shutterstock_102019039-1d869.jpg'},
+  // ]);
 }
 
 // Sets up shortcuts to Firebase features and initiate firebase auth.

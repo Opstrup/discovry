@@ -1,0 +1,26 @@
+.location-card {
+  margin-top: 15px;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.location-card.mdl-card {
+}
+.location-card > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  margin-bottom: 10px;
+}
+.location-card > .mdl-card__menu {
+  color: #fff;
+}
+
+main, #location-cards-container {
+  padding-bottom: 0;
+}
+
+#location-cards-container {
+  height: calc(100% - 150px);
+  padding-top: 200px;
+  padding-bottom: 0;
+}
