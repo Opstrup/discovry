@@ -32,10 +32,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.grey-indigo.min.css" />
   <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
-
   <!-- App Styling -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/map-view.css">
   <link rel="stylesheet" href="styles/select-location-view.css">
   <link rel="stylesheet" href="styles/locationlist.css">
 </head>
@@ -69,16 +69,23 @@
     </form>
   </main>
   <!-- FAB button with ripple -->
-  <button id="create-route-button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect"style="display: none; background-color: grey;">
+  <button id="create-route-button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect"style="background-color: grey;">
     <i class="material-icons" style="top: 28px;left: 23px;">add</i>
   </button>
   <div id="map"></div>
+</div>
 <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://apis.google.com/js/api.js"></script>
 <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 <script src="https://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
 <script src="scripts/underscore-min.js"></script>
+<script>
+  $(function(){
+    $('#map').hide();
+    $('#create-route-button').hide();
+  });
+</script>
 <script>
   // Initialize Firebase
   var config = {
@@ -90,6 +97,7 @@
   };
   firebase.initializeApp(config);
 </script>
+<script src="scripts/map.js"></script>
 <script src="scripts/locationlist.js"></script>
 <script src="scripts/googlePlaces.js"></script>
 <script src="scripts/main.js"></script>

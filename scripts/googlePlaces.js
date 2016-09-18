@@ -30,6 +30,7 @@ function getPlaces() {
 function callback(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
         $('#user-container').text('top attractions in ' + $('#searchTextField').val());
+        $('#create-route-button').show();
         $('.mdl-layout__header').addClass('header-show');
         var locList = new LocationList();
         locList.showList(results);
