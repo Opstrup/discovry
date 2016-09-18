@@ -29,9 +29,9 @@ function getPlaces() {
 
 function callback(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
-        var locList = new LocationList();
-        locList.showList(results);
         $('#user-container').text('top attractions in ' + $('#searchTextField').val());
         $('.mdl-layout__header').addClass('header-show');
+        var locList = new LocationList();
+        locList.showList(results);
     }
 }
