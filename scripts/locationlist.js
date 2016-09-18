@@ -34,24 +34,18 @@ LocationList.prototype.addLocation = function(location) {
           location.name +
         '</h2>' +
       '</div>' +
-      '<span class="info"><i class="info-icon material-icons md-dark">place</i><h6>' +
-        location.vicinity +
-      '</h6></span>' +
-      '<span class="info"><i class="info-icon material-icons md-dark">star</i><h6>' +
-        location.rating +
-      '</h6></span>' +
-      '<div class="mdl-card__supporting-text">' +
-        location.description +
-      '</div>' +
-      // TODO: opening hours
-      // TODO: pricelevel
-      // TODO: website
+      (location.vicinity ? '<span class="info"><i class="info-icon material-icons md-dark">place</i><h6>' + location.vicinity + '</h6></span>' : '') +
+      (location.rating ? '<span class="info" style="display: inline-block"><i class="info-icon material-icons">star</i><h6>' + location.rating + '</h6></span>' : '') +
+      '<br/>' +
+      // '<div class="mdl-card__supporting-text">' +
+      //   location.description +
+      // '</div>' +
       '<div id="' + location.id + '-status" class="mdl-card__actions mdl-card--border">' +
-        '<a id="' + location.id + '-add" class="add-location-button mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">' +
-          '<i id="' + location.id + '"class="add-location-icon material-icons md-light">add_location</i>' +
+        '<a id="' + location.id + '-add" class="add-location-button mdl-button mdl-js-button mdl-js-ripple-effect">' +
+          '<i id="' + location.id + '"class="add-location-icon material-icons md-dark">add_location</i>' +
           'Add to plan' +
         '</a>' +
-        '<a id="' + location.id + '-added" class="added-location-status mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">' +
+        '<a id="' + location.id + '-added" class="added-location-status mdl-button mdl-js-button mdl-js-ripple-effect">' +
           '<i class="add-location-icon material-icons md-light">done</i>' +
           'Added' +
         '</a>' +
@@ -62,7 +56,7 @@ LocationList.prototype.addLocation = function(location) {
     '</div>']);
 
     $('#'+location.id+'-add').click(function() {
-      $('#' + location.id + '-status').animate({backgroundColor: 'green'},
+      $('#' + location.id + '-status').animate({backgroundColor: 'rgb(76,175,80)'},
                 { easing: 'swing',
                   duration: 200 });
       $('#'+location.id+'-add')
@@ -70,7 +64,7 @@ LocationList.prototype.addLocation = function(location) {
                 { easing: 'swing',
                   duration: 200 });
       $('#'+location.id+'-added')
-        .animate({left: '0%'},
+        .animate({left: '10%'},
                 { easing: 'swing',
                   duration: 200 });
       self.addToPlan(location);
@@ -79,6 +73,6 @@ LocationList.prototype.addLocation = function(location) {
     // Set background image on location card
     var photo = typeof location.photos !== 'undefined'
       ? location.photos[0].getUrl({'maxWidth': 500})
-      : 'http://i.imgur.com/88F5ZvY.gif'
+      : 'https://lh6.googleusercontent.com/-3OFqJmpqI94/VE-1oSLxJzI/AAAAAAAAciM/Ff4PsOg8U_k/w1366-h768/Material%2BDesign%2B03.png'
     $('#'+location.id ).css({"background": "url('" + photo + "') center / cover"});
 };

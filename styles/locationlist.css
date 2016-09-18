@@ -29,13 +29,14 @@ main, #location-cards-container {
 }
 
 .add-location-button {
-  left: 0%;
+  left: -25px;
   width: 40%;
 }
 
 .added-location-status {
   width: 40%;
   left: -100%;
+  color: white;
 }
 
 .mdl-card__title {
@@ -55,4 +56,5 @@ span.info {
   margin-left: 0px;
   overflow:auto;
   display:block;
+  margin-bottom: 0px;
 }
