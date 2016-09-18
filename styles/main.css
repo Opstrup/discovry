@@ -204,3 +204,8 @@ header {
   top: -1px;
   margin-right: 5px;
 }
+#create-route-button {
+  position: fixed;
+  bottom: 20px;
+  left: 80%;
+}
