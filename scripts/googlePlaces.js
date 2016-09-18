@@ -1,12 +1,13 @@
 var map;
 var autocomplete;
+var locList;
 
 function initMap() {
     var pyrmont = {lat: -33.867, lng: 151.195};
 
     map = new google.maps.Map(document.getElementById('map'), {
         center: pyrmont,
-        zoom: 15
+        zoom: 12
     });
 
     var input = document.getElementById('searchTextField');
@@ -32,7 +33,7 @@ function callback(results, status) {
         $('#user-container').text('top attractions in ' + $('#searchTextField').val());
         $('#create-route-button').show();
         $('.mdl-layout__header').addClass('header-show');
-        var locList = new LocationList();
+        locList = new LocationList();
         locList.showList(results);
     }
 }

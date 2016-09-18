@@ -6,6 +6,10 @@ function LocationList() {
   self.locations = [];
 }
 
+LocationList.prototype.getPlan = function () {
+  return self.plan;
+}
+
 LocationList.prototype.showList = function(locations) {
   $("#main-container").html(
     '<div id="location-list" class="location-cards-container"></div>'
