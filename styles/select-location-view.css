@@ -20,3 +20,15 @@
 #user-container {
     padding-right: 15px;
 }
+
+.logo-small-wrapper {
+    width: 18%;
+    overflow: hidden;
+    height: 36px;
+    margin-bottom: 5px;
+}
+
+.logo-small {
+    width: 100%;
+    height: 59px;
+}
